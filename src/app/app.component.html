@@ -14,5 +14,26 @@
       <a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="assets/instagram_logo.png"  width="50px" height="50px" alt="Instagram" ></a>
   </div>            
 </div>
-
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+        <th>Emp Id</th>
+        <th>Emp F.Name</th>
+        <th>Emp L.Name</th>
+        <th>Emp Gender</th>
+        <th>Emp Salary</th>
+        <th>Emp DOB</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employe of employees">
+        <td>{{employe.empid}}</td>
+        <td>{{employe.firstName}}</td>
+        <td>{{employe.lastName }}</td>
+        <td>{{employe.gender}}</td>
+        <td>{{employe.salary}}</td>
+        <td>{{employe.DOB}}</td>
+    </tr>
+</tbody>
+</table>
 
