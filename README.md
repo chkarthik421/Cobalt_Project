@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # CobaltProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
@@ -29,3 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # AuditShark_Project
 >>>>>>> b7ac1d13b49a521dc00578999e216f12b3a7353b
+=======
+# Cobalt_Project
+This is my practice project
+>>>>>>> 9d58d80add834e3f9c66cc7309257dc9dbd390e5
