@@ -11,5 +11,4 @@ export class TopHeaderComponent {
   constructor() {
     setInterval(() => {this.today = Date.now()}, 1);
 } 
-
 }

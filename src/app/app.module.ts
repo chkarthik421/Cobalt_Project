@@ -6,25 +6,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './Components/login/login.component';
-import { SignupComponent } from './Components/signup/signup.component';
-import { TopHeaderComponent } from './Components/top-header/top-header.component';
-import { HeaderComponent } from './Components/header/header.component';
+import { HomepageModule } from './homepage/homepage.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignupComponent,
-    TopHeaderComponent,
-    HeaderComponent
+  
+   
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HomepageModule
+  ],
+  exports:[
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
