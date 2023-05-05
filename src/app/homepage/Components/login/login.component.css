@@ -1,55 +1,65 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  .content-wrapper{
-    background: -webkit-linear-gradient(-90deg, #45b257, #4433db);
-    height: 580px;
-  }
-  .card {
-    height: 540px;
-    margin:auto;
-    padding: 20px 500px 0px ;
-    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
-  }
-  .card-header {
-    /* background: -webkit-linear-gradient(left, #45b25d, #3098b3); */
-    width: 200px;
-    height: 50px;
-    font-size: 35px;
-    font-weight: 600;
-    color: hsl(200, 85%, 50%);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.content-wrapper{
+  background: -webkit-linear-gradient(-90deg, #45b257, #4433db);
+  height: 590px;
+}
+.card {
+  height: 540px;
+  margin:auto;
+  padding: auto;
+  background: -webkit-linear-gradient(left, #968499, #a0627f);
+}
+.card-header {
+  height: 50px;
+  font-size: 35px;
+  font-weight: 600;
+  color: hsl(200, 85%, 50%);
+  margin: auto;
   
-  .card-body {
-                line-height: 10px;
-                
-  }
-  .card-footer{
-    height: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    color: hsl(20, 100%, 60%);
-    padding-top: 10px;
-  }
+}
+
+.card-body {
+              line-height: 10px;
+              margin:auto;
+              
+}
+.card-footer{
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(20, 100%, 60%);
+  margin: auto;
+  padding-top: 10px;
+}
+
+#sign {
+  color: red;
+  padding-left: 20px;
+}
+.field {
+  margin: 30px 0px 30px;
+  width: 100%;
   
-  #sign {
-    color: red;
-    padding-left: 20px;
-  }
-  .field {
-    margin: 30px 0px 30px;
-    width: 100%;
-    
-  }
-  .field input {
-    height: 50px;
-    border-radius: 10px;
-    width: 200px;
-  }
+}
+.field input {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+#forgot {
+  color: #10ec59;
+}
+
+.err {
+  margin-top: 10px;
   
-  #forgot {
-    color: #10ec59;
-  }
+}
+#pwdptrn {
+  text-decoration: dashed;
+}

@@ -6,12 +6,11 @@
   }
   .content-wrapper{
     background: -webkit-linear-gradient(-90deg,#a445b2,#fa4299);
-    height: 520px;
+    height: 540px;
   }
   .card {
     height: 500px;
     margin:auto;
-    padding: 20px 500px 0px;
     background: -webkit-linear-gradient(left,#45b257, #4433db);
   }
   .card-header {
@@ -19,15 +18,19 @@
     font-size: 35px;
     font-weight: 600;
     color: hsl(200, 85%, 50%);
+    margin: auto;
   }
   
-  
+  .card-body{
+    margin: auto;
+  }
   .card-footer{
     height: 50px;
     font-size: 20px;
     font-weight: 600;
     color: hsl(20, 100%, 60%);
     padding-top: 10px;
+    margin: auto;
   }
   
   #log {

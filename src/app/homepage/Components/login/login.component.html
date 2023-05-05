@@ -1,32 +1,101 @@
 <div class="content-wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col col-sm-12 offset-3">
-                <div class="card col-sm-6 mt-4">
-                    <div class="card-header">
-                        <div class="title login">Login Form</div>
-                    </div>
-                    <div class="card-body">
-                        <form #myForm="ngForm" action="#" class="login">
-                            <div class="field">
-                              <input type="text" placeholder="Email Address" ngModel required>
-                            </div>
-                            <div class="field">
-                              <input type="password" placeholder="Password" ngModel required>
-                            </div>
-                            <div class="pass-link"><a href="#">Forgot password?</a></div>
-                            <div class="field btn">
-                              <!-- <div class="btn-layer"></div> -->
-                              <input type="submit" value="Login">
-                            </div>                            
-                          </form>
-                    </div>
-                    <div class="card-footer">
-                        <div class="signup-link">Not a member? <a routerLink="/home" routerLinkActive="active" id="sign">Signup now</a></div>
-                    </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-sm-12 offset-3">
+        <div class="card col-sm-6 mt-4">
+          <div class="card-header">
+            <div class="title login">Login Form</div>
+          </div>
+          <div class="card-body">
+            <form #myForm="ngForm" action="#" class="login">
+              <div class="field">
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  placeholder="Email Address"
+                  class="form-control"
+                  #email="ngModel"
+                  [class.is-invalid]="email.invalid"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  ngModel
+                  required
+                />
+                <div
+                  *ngIf="email.errors && (email.valid || email.touched)"
+                  class="err"
+                >
+                  <span
+                    class="text-danger"
+                    *ngIf="email.errors && email.errors['required']"
+                    >Email is Required</span
+                  >
+                  <span
+                    class="text-danger"
+                    *ngIf="email.errors && email.errors['pattern']"
+                    >Invalid Email Id</span
+                  >
                 </div>
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  id="pwd"
+                  name="password"
+                  placeholder="Password"
+                  class="form-control"
+                  #pwd="ngModel"
+                  [class.is-invalid]="pwd.invalid"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$"
+                  ngModel
+                  required
+                />
+                <div
+                  *ngIf="pwd.errors && (pwd.valid || pwd.touched)"
+                  class="err"
+                >
+                  <span
+                    class="text-danger"
+                    *ngIf="pwd.errors && pwd.errors['required']"
+                    >Password is Required</span
+                  >
+                  <span
+                    class="text-danger"
+                    *ngIf="pwd.errors && pwd.errors['pattern']"
+                  >
+                    <p>
+                      Password must contain at least one number, one uppercase
+                    </p>
+                    <br />
+                    <p>and a lowercase letter and at least 8 characters</p>
+                    <p><br />Password cannot contain whitespace</p></span
+                  >
+                </div>
+              </div>
+              <div class="pass-link">
+                <a href="#" class="text-danger">Forgot password?</a>
+              </div>
+              <div class="field btn">
+                <input type="submit" value="Login" />
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="signup-link">
+              Not a member?
+              <a routerLink="/home" routerLinkActive="active" id="sign"
+                >Signup now</a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
+<!-- <div>
+    <input type="text" name="firstName" placeholder="First Name" ngModel #fn="ngModel" required minlength="10"/>
+    <input type="password" name="password" placeholder="Pass Word" ngModel #pwd="ngModel" required />
+    <button class="btn btn-success" (click)="show(fn,pwd)">Click</button>
+</div> -->

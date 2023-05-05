@@ -4,12 +4,17 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule }   from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+
 
 import { HeaderComponent } from './Components/header/header.component';
 import { HomepageComponent } from './homepage.component';
 import { TopHeaderComponent } from './Components/top-header/top-header.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { LoginComponent } from './Components/login/login.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -18,7 +23,8 @@ import { LoginComponent } from './Components/login/login.component';
     HomepageComponent,
     TopHeaderComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
     
             
   ],
@@ -27,7 +33,9 @@ import { LoginComponent } from './Components/login/login.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
     
   ],
   exports: [
@@ -35,7 +43,8 @@ import { LoginComponent } from './Components/login/login.component';
     TopHeaderComponent,
     HomepageComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ]
 })
 export class HomepageModule { }
