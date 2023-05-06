@@ -7,7 +7,7 @@
             <div class="title login">Login Form</div>
           </div>
           <div class="card-body">
-            <form #myForm="ngForm" action="#" class="login">
+            <form #myForm="ngForm" ngGroup="myForm" action="#" class="login">
               <div class="field">
                 <input
                   type="email"
@@ -76,7 +76,8 @@
                 <a href="#" class="text-danger">Forgot password?</a>
               </div>
               <div class="field btn">
-                <input type="submit" value="Login" />
+                <input type="submit"  [disabled]="myForm.invalid" routerLink="/dashboard" routerLinkActive="active" value="Login" />
+                
               </div>
             </form>
           </div>

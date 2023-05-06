@@ -12,9 +12,25 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-show(fn:any,pwd:any){
-  console.log(fn);
-  console.log(pwd);
+
+  flag:boolean=false;
+  isValid:boolean=false;
+  email:any;
+  pwd:any;
+
+  show(){
+    if((this.email.valid=this.isValid) && (this.pwd.valid=this.isValid)){
+      this.flag=true;
+      
+    }
+    else{
+      this.flag=false;
+      
+    }
+  }
+// show(fn:any,pwd:any){
+//   console.log(fn);
+//   console.log(pwd);
   
-}
+// }
 }
